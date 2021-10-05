@@ -21,8 +21,14 @@ export class UsersService {
     return this.repo.find({ email: email });
   }
 
-  update() {
-    return;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async update(id: number, attrs: Partial<User>) {
+    const user = await this.findOne(id);
+    if (!user) {
+      throw new Error('user not found');
+    }
+    Object.assign(user, attrs);
+    return this.repo.save(user);
   }
 
   remove() {
