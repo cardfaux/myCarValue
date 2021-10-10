@@ -30,7 +30,7 @@ export class UsersController {
     session.color = color;
   }
 
-  @Get('/color')
+  @Get('/colors')
   getColor(@Session() session: any) {
     return session.color;
   }
