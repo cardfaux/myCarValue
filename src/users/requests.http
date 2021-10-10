@@ -32,9 +32,3 @@ content-type: application/json
 {
   "email": "changedupdated@email.com"
 }
-
-### Set a color
-GET http://localhost:3000/auth/colors/blue
-
-### Get the color
-GET http://localhost:3000/auth/colors
