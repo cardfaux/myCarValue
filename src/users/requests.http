@@ -3,17 +3,17 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "hashedandsalted@email.com",
-  "password": "hashedpassword"
+  "email": "sessionagain@email.com",
+  "password": "session"
 }
 
-### Sighin with a created user
+### Signin with a created user
 POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "email": "hashedandsalted@email.com",
-  "password": "hashedpassword"
+  "email": "session@email.com",
+  "password": "session"
 }
 
 ### find a particular user with a given ID
@@ -32,3 +32,6 @@ content-type: application/json
 {
   "email": "changedupdated@email.com"
 }
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
