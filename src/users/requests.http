@@ -16,6 +16,9 @@ content-type: application/json
   "password": "12345"
 }
 
+### Get all users -- does not work --
+GET http://localhost:3000/auth
+
 ### Get the currently signed in user
 GET http://localhost:3000/auth/whoami
 
